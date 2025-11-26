@@ -16,7 +16,7 @@ O projeto foi desenvolvido como parte da disciplina **Programação Estruturada 
 
 ---
 
-## 📦 Funcionalidades
+## Funcionalidades
 
 ### **Operações implementadas (base):**
 
@@ -36,7 +36,6 @@ O projeto permite adicionar uma operação extra mais complexa, como:
 * XOR entre números grandes
 * Multiplicação de matrizes
 
-> A operação extra é modular: basta implementá-la no arquivo `operations.c`.
 
 ### **Modos de entrada/saída**
 
@@ -45,7 +44,7 @@ O projeto permite adicionar uma operação extra mais complexa, como:
 
 ---
 
-## 🏗 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 calc-bigint/
@@ -74,13 +73,16 @@ calc-bigint/
 ### **Principais módulos**
 
 🟦 **bigint.c / bigint.h** — criação, destruição, parsing e impressão de BigInts
+
 🟩 **operations.c / operations.h** — operações aritméticas entre BigInts
+
 🟨 **io.c / io.h** — leitura e escrita (terminal/arquivos)
+
 🟥 **main.c** — loop da calculadora, sistema de menu
 
 ---
 
-## 🧮 Como a Aritmética Funciona
+## Como a Aritmética Funciona
 
 A implementação usa **blocos de 9 dígitos (base 1e9)** para representar números muito grandes.
 
@@ -103,7 +105,7 @@ As operações seguem o mesmo algoritmo que fazemos no papel, mas com blocos:
 
 ---
 
-## 🚀 Como Compilar
+## Como Compilar
 
 Certifique-se de ter `gcc` instalado.
 Depois, basta rodar:
@@ -120,7 +122,7 @@ O binário será gerado em:
 
 ---
 
-## 🧪 Testes
+## Testes
 
 O diretório `tests/` contém testes básicos, e você pode criar novos usando:
 

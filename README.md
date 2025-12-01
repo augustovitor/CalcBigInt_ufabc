@@ -50,12 +50,7 @@ O projeto permite adicionar uma operação extra mais complexa, como:
 calc-bigint/
 ├── src/
 │   ├── main.c
-│   ├── bigint.c
-│   ├── bigint.h
-│   ├── operations.c
-│   ├── operations.h
-│   ├── io.c
-│   └── io.h
+
 │
 ├── exercises/                 # Mini-tarefas do professor (treinamento)
 │   ├── tarefa_01_menu/
@@ -80,6 +75,7 @@ calc-bigint/
 
 🟥 **main.c** — loop da calculadora, sistema de menu
 
+(Agora todos movidos de forma monolitica para Main.c para facilitar a implementação da leitura por arquivo)
 ---
 
 ## Como a Aritmética Funciona

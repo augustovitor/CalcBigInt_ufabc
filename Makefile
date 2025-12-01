@@ -1,25 +1,19 @@
+# Makefile - para MSYS2 MINGW64
 CC = gcc
-CFLAGS = -std=c11 -Wall -Wextra -O2 -Isrc
-SRCDIR = src
-OBJDIR = build
-BINDIR = bin
+CFLAGS = -O2 -Wall -Wextra -std=c11
 
-SOURCES = $(wildcard $(SRCDIR)/*.c)
-OBJECTS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SOURCES))
-TARGET = $(BINDIR)/calcbigint
+TARGET = calcbigint.exe
+SRC = src/main.c
 
-all: dirs $(TARGET)
+.PHONY: all clean run
 
-dirs:
-	mkdir -p $(OBJDIR) $(BINDIR)
+all: $(TARGET)
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $@ $^
 
-$(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) $^ -o $@
+run: $(TARGET)
+	./$(TARGET)
 
 clean:
-	rm -rf $(OBJDIR) $(BINDIR)
-
-.PHONY: all clean dirs
+	rm -f $(TARGET)
